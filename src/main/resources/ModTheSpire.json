@@ -1,0 +1,14 @@
+{
+  "modid": "Theresa_FimmlpS",
+  "name": "Theresa",
+  "author_list": [
+    "FimmlpS"
+  ],
+  "description": "Character Mod of Arknights: Theresa.",
+  "dependencies": [
+    "basemod"
+  ],
+  "version": "0.8.0",
+  "sts_version": "12-22-2020",
+  "mts_version": "3.23.2"
+}

@@ -1,0 +1,9 @@
+{
+  "firewatch:ExamplePower": {
+    "NAME": "能力示例",
+    "DESCRIPTIONS": [
+      "在你回合开始时，触发 #b",
+      " 次。"
+    ]
+  }
+}
