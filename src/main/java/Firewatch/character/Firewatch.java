@@ -1,6 +1,7 @@
 package Firewatch.character;
 
 import Firewatch.helper.RegisterHelper;
+import Firewatch.modcore.FirewatchMod;
 import Firewatch.patch.ClassEnum;
 import Firewatch.patch.ColorEnum;
 import basemod.abstracts.CustomPlayer;
