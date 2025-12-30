@@ -1,9 +1,98 @@
 {
-  "firewatch:ExamplePower": {
-    "NAME": "能力示例",
+  "firewatch:EnvironmentDisguisePower": {
+    "NAME": "环境伪装，别被识破",
     "DESCRIPTIONS": [
-      "在你回合开始时，触发 #b",
-      " 次。"
+      "本回合打出 #y手牌 后立即结束你的回合。"
+    ]
+  },
+  "firewatch:RiversidePower": {
+    "NAME": "我正在河岸游击",
+    "DESCRIPTIONS": [
+      "打出游击区的 #y技能牌 后会恢复实际消耗能量，但是也无法从中获得格挡。"
+    ]
+  },
+  "firewatch:HardToSayPower": {
+    "NAME": "必须回避这次攻击",
+    "DESCRIPTIONS": [
+      "下次受到未被格挡的攻击伤害后，下一回合获得 #b",
+      "下次受到攻击后，下一回合获得 #b",
+      " 点 [E] 。"
+    ]
+  },
+  "firewatch:GoodEquipmentPower": {
+    "NAME": "请求支援！",
+    "DESCRIPTIONS": [
+      "攻击敌人时额外获得 #b",
+      " 点技力。"
+    ]
+  },
+  "firewatch:MultiAngryPower": {
+    "NAME": "怒火中烧",
+    "DESCRIPTIONS": [
+      "在下一回合获得 #y以牙还牙 ：抽到状态牌或诅咒牌时，消耗其并抽3张牌。",
+      "在下一回合获得 #y以血还血 ：抽到状态牌或诅咒牌时，消耗其并抽3张牌，并获得 [E] 。"
+    ]
+  },
+  "firewatch:MultiAngryNextPower": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "以牙还牙",
+      "直到回合结束，抽到状态牌或诅咒牌时，消耗其并抽3张牌。",
+      "以血还血",
+      "直到回合结束，抽到状态牌或诅咒牌时，消耗其并抽3张牌，并获得 [E] 。"
+    ]
+  },
+  "firewatch:WindAcrossRiverPower": {
+    "NAME": "似乎有风声……跨越河流",
+    "DESCRIPTIONS": [
+      "每次触发 #y游击 时，对随机敌人造成 #b",
+      " 点伤害，并从弃牌堆随机获得1张牌。"
+    ]
+  },
+  "firewatch:WindAcrossRiverNextPower": {
+    "NAME": "风一直都在",
+    "DESCRIPTIONS": [
+      "每种类型牌首次触发游击后，使 #y穿过河流的风声 效果增加2。"
+    ]
+  },
+  "firewatch:SoHardPower": {
+    "NAME": "会永远牢固的",
+    "DESCRIPTIONS": [
+      "每当你离开居民区时获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "firewatch:AmbushPower": {
+    "NAME": "潜伏",
+    "DESCRIPTIONS": [
+      "持续到回合结束，不会受到攻击伤害，进行攻击时此效果消失，并获得2层 #y易伤 。"
+    ]
+  },
+  "firewatch:AssassinPower": {
+    "NAME": "暗杀者",
+    "DESCRIPTIONS": [
+      "对意图不是攻击的敌人造成的攻击伤害+55%。"
+    ]
+  },
+  "firewatch:AssassinNextPower": {
+    "NAME": "保持冷静。",
+    "DESCRIPTIONS": [
+      "攻击意图不是攻击的敌人时额外获得 #b",
+      " 点技力。"
+    ]
+  },
+  "firewatch:MoonTalkPower": {
+    "NAME": "击杀他们。",
+    "DESCRIPTIONS": [
+      "所有 #y募讨 的伤害提升 #b",
+      " 点。"
+    ]
+  },
+  "firewatch:MoonTalkNextPower": {
+    "NAME": "立即击杀他们。",
+    "DESCRIPTIONS": [
+      "你的下一张 #y募讨 的伤害提升 #b",
+      " 点。"
     ]
   }
 }

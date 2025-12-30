@@ -1,7 +1,10 @@
 package Firewatch.modcore;
 
 import Firewatch.character.Firewatch;
+import Firewatch.helper.FirewatchHelper;
 import Firewatch.helper.RegisterHelper;
+import Firewatch.patch.AmbushFixPatch;
+import Firewatch.patch.AmbushPatch;
 import Firewatch.patch.ClassEnum;
 import Firewatch.patch.ColorEnum;
 import basemod.BaseMod;
@@ -26,7 +29,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 @SpireInitializer
-public class FirewatchMod implements PreStartGameSubscriber, StartGameSubscriber,OnPlayerTurnStartPostDrawSubscriber,PostBattleSubscriber,OnPlayerTurnStartSubscriber,OnStartBattleSubscriber,PostInitializeSubscriber,EditStringsSubscriber, EditKeywordsSubscriber, EditCardsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber {
+public class FirewatchMod implements OnCardUseSubscriber,PreStartGameSubscriber, StartGameSubscriber,OnPlayerTurnStartPostDrawSubscriber,PostBattleSubscriber,OnPlayerTurnStartSubscriber,OnStartBattleSubscriber,PostInitializeSubscriber,EditStringsSubscriber, EditKeywordsSubscriber, EditCardsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber {
     private static final Logger logger = LogManager.getLogger(FirewatchMod.class);
 
     public static Color tColor = new Color(234f/255f,221f/255f,212f/255f,1);
@@ -163,22 +166,31 @@ public class FirewatchMod implements PreStartGameSubscriber, StartGameSubscriber
 
     @Override
     public void receivePreStartGame() {
-
+        AmbushPatch.resetAmbush();
+        AmbushFixPatch.canSetRoundEnd = false;
+        FirewatchHelper.reset();
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-
+        AmbushFixPatch.canSetRoundEnd = false;
     }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
+        AmbushPatch.resetAmbush();
+        AmbushFixPatch.canSetRoundEnd = false;
+        FirewatchHelper.reset();
+    }
 
+    @Override
+    public void receiveCardUsed(AbstractCard abstractCard) {
+        FirewatchHelper.onUseCard(abstractCard);
     }
 
     @Override
     public void receiveOnPlayerTurnStart() {
-
+        FirewatchHelper.atTurnStart();
     }
 
     @Override

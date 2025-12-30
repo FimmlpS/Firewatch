@@ -2,17 +2,24 @@ package Firewatch.helper;
 
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.UIStrings;
 
 public class StringHelper {
     public static final String MOD_ID = "firewatch:";
+    public static final UIStrings OPERATION = CardCrawlGame.languagePack.getUIString("firewatch:Operation");
 
     public static String getRelicIMGPATH(String ID,boolean outline){
         //replace
         ID = ID.replace(MOD_ID,"");
+        String path = "FirewatchResources/img/relics/"+ID+".png";
         if(outline){
-            return "FirewatchResources/img/relics/"+ID+"_O.png";
+            path = "FirewatchResources/img/relics/"+ID+"_O.png";
         }
-        return "FirewatchResources/img/relics/"+ID+".png";
+        if(Gdx.files.internal(path).exists()) {
+            return path;
+        }
+        return getTempRelicIMGPath(outline);
     }
 
     public static String getCardIMGPath(String ID, AbstractCard.CardType type) {
@@ -55,5 +62,12 @@ public class StringHelper {
             }
         }
         return "FirewatchResources/img/cards/Defend_skill.png";
+    }
+
+    public static String getTempRelicIMGPath(boolean outline){
+        if(outline){
+            return "FirewatchResources/img/relics/Module_O.png";
+        }
+        return "FirewatchResources/img/relics/Module.png";
     }
 }

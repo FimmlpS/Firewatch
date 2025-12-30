@@ -12,7 +12,7 @@ public class Defend extends AbstractFirewatchCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public Defend() {
-        super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.BASIC,CardTarget.ENEMY);
+        super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.BASIC,CardTarget.SELF);
         baseBlock = block = 5;
         tags.add(CardTags.STARTER_DEFEND);
     }

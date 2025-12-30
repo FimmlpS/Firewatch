@@ -1,14 +1,14 @@
 {
-  "modid": "Theresa_FimmlpS",
-  "name": "Theresa",
+  "modid": "Firewatch_FimmlpS",
+  "name": "Firewatch",
   "author_list": [
     "FimmlpS"
   ],
-  "description": "Character Mod of Arknights: Theresa.",
+  "description": "Character Mod of Arknights: Firewatch.",
   "dependencies": [
     "basemod"
   ],
-  "version": "0.8.0",
+  "version": "0.2.0",
   "sts_version": "12-22-2020",
   "mts_version": "3.23.2"
 }
