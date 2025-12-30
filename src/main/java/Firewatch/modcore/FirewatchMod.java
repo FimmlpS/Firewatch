@@ -3,6 +3,7 @@ package Firewatch.modcore;
 import Firewatch.character.Firewatch;
 import Firewatch.helper.FirewatchHelper;
 import Firewatch.helper.RegisterHelper;
+import Firewatch.helper.SoundHelper;
 import Firewatch.patch.AmbushFixPatch;
 import Firewatch.patch.AmbushPatch;
 import Firewatch.patch.ClassEnum;
@@ -169,6 +170,7 @@ public class FirewatchMod implements OnCardUseSubscriber,PreStartGameSubscriber,
         AmbushPatch.resetAmbush();
         AmbushFixPatch.canSetRoundEnd = false;
         FirewatchHelper.reset();
+        SoundHelper.reset();
     }
 
     @Override
@@ -181,6 +183,7 @@ public class FirewatchMod implements OnCardUseSubscriber,PreStartGameSubscriber,
         AmbushPatch.resetAmbush();
         AmbushFixPatch.canSetRoundEnd = false;
         FirewatchHelper.reset();
+        SoundHelper.reset();
     }
 
     @Override

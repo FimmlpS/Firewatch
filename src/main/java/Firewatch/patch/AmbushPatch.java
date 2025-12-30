@@ -3,9 +3,11 @@ package Firewatch.patch;
 import Firewatch.ambush.*;
 import Firewatch.card.AbstractFirewatchCard;
 import Firewatch.character.Firewatch;
+import Firewatch.power.buff.GrowingPower;
 import Firewatch.power.buff.SoHardPower;
 import Firewatch.power.buff.WindAcrossRiverNextPower;
 import Firewatch.power.buff.WindAcrossRiverPower;
+import Firewatch.power.debuff.NoTerraPower;
 import Firewatch.ui.AmbushPanel;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
@@ -72,6 +74,11 @@ public class AmbushPatch {
                 break;
         }
         ambushArea.onEnterArea();
+        //屯田力量判断
+        AbstractPower growing = AbstractDungeon.player.getPower(GrowingPower.POWER_ID);
+        if(growing instanceof GrowingPower){
+            ((GrowingPower) growing).judgeApply();
+        }
     }
 
     public static void resetAmbush(){
@@ -228,6 +235,10 @@ public class AmbushPatch {
                 AbstractCard targetCard = ReflectionHacks.getPrivate(_inst,UseCardAction.class,"targetCard");
                 //从游击区打出则直接进入弃牌堆
                 if(CardField.inAmbush.get(targetCard)){
+                    return SpireReturn.Continue();
+                }
+                //拥有土地流失时不能进入
+                if(AbstractDungeon.player.hasPower(NoTerraPower.POWER_ID)){
                     return SpireReturn.Continue();
                 }
                 if(ambushGroup.size()>=ambushArea.getTopLimit()){
@@ -502,6 +513,7 @@ public class AmbushPatch {
         Riverside,
         SnowForest,
         SnowTown,
-        PlainTown
+        PlainTown,
+        Hill
     }
 }

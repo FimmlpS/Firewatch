@@ -15,6 +15,26 @@ public class FirewatchHelper {
     public static ArrayList<AbstractCard> cardsThisTurn = new ArrayList<>();
     public static boolean playedColorless = false;
 
+    public static ArrayList<AbstractCard> getAllCardsInCombat(){
+        ArrayList<AbstractCard> cards = new ArrayList<>();
+        cards.addAll(AbstractDungeon.player.drawPile.group);
+        cards.addAll(AbstractDungeon.player.discardPile.group);
+        cards.addAll(AbstractDungeon.player.hand.group);
+        cards.addAll(AmbushPatch.ambushGroup.group);
+        return cards;
+    }
+
+    public static boolean isWild(){
+        return AmbushPatch.ambushType == AmbushPatch.AmbushType.Forest || AmbushPatch.ambushType == AmbushPatch.AmbushType.Riverside || AmbushPatch.ambushType == AmbushPatch.AmbushType.SnowForest || AmbushPatch.ambushType == AmbushPatch.AmbushType.Hill;
+    }
+
+    public static boolean isNeighbor(){
+        if(AbstractDungeon.player.hasPower("todo") && AmbushPatch.ambushType==AmbushPatch.AmbushType.Forest){
+            return true;
+        }
+        return AmbushPatch.ambushType== AmbushPatch.AmbushType.SnowTown || AmbushPatch.ambushType== AmbushPatch.AmbushType.PlainTown;
+    }
+
     public static void reset(){
         cardsLastTurn.clear();
         cardsThisTurn.clear();

@@ -1,9 +1,9 @@
 package Firewatch.ambush;
 
 import Firewatch.action.DiscardOverflowAction;
+import Firewatch.action.PlantAction;
 import Firewatch.action.ReplaceAreaAction;
 import Firewatch.patch.AmbushPatch;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -27,7 +27,8 @@ public class AmbushPlainTown extends AbstractAmbushArea{
         if(!AmbushPatch.ambushGroup.isEmpty()){
             AbstractCard bottom = AmbushPatch.ambushGroup.getBottomCard();
             if(bottom!=card){
-                AbstractDungeon.actionManager.addToBottom(new DiscardSpecificCardAction(bottom,AmbushPatch.ambushGroup));
+                AmbushPatch.ambushGroup.moveToDiscardPile(bottom);
+                PlantAction.leaveCardCount++;
             }
         }
     }

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 public class StringHelper {
     public static final String MOD_ID = "firewatch:";
     public static final UIStrings OPERATION = CardCrawlGame.languagePack.getUIString("firewatch:Operation");
+    public static final UIStrings MODIFIER = CardCrawlGame.languagePack.getUIString("firewatch:Modifier");
 
     public static String getRelicIMGPATH(String ID,boolean outline){
         //replace

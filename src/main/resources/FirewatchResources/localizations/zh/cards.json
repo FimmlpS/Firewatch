@@ -42,7 +42,23 @@
     "DESCRIPTION": "使所有攻击意图敌人失去 !M! 点临时 力量 ，给予其他敌人1层 易伤 。 NL firewatch:游击 ：将此牌的复制置于抽牌堆顶。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "使所有攻击意图敌人失去 !M! 点临时 力量 ，给予其他敌人1层 易伤 ，抽等量张牌。 NL firewatch:游击 ：将此牌的复制置于抽牌堆顶。 NL 保留 ， 消耗 。"
   },
-
+  "firewatch:MorningBird": {
+    "NAME": "晨间鸟鸣",
+    "DESCRIPTION": "失去最多 !M! 点 格挡 。 NL 回复等量的生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 失去最多 !M! 点 格挡 。 NL 回复等量生命。 NL 消耗 。"
+  },
+  "firewatch:HandWindPiano": {
+    "NAME": "篝火边的手风琴",
+    "DESCRIPTION": "虚无 ， 消耗 。 NL 使所有手牌获得 firewatch:乐声 。 NL firewatch:协奏 ：先抽2张牌。",
+    "UPGRADE_DESCRIPTION": "虚无 ， 消耗 。 NL 抽2张牌，然后使所有手牌获得 firewatch:乐声 。 NL firewatch:协奏 ：先抽2张牌。"
+  },
+  "firewatch:AnDieFreude": {
+    "NAME": "欢乐颂",
+    "DESCRIPTION": "对所有敌人造成 !M! 倍于所有 firewatch:乐声 牌数的伤害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (造成 !D! 点伤害)"
+    ]
+  },
   "firewatch:IcelandTrace": {
     "NAME": "雪原足迹",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将上回合打出过的随机攻击牌复制到手牌，其获得 虚无 和 消耗 。"
@@ -73,6 +89,20 @@
       "类型数不足，时机尚未成熟。"
     ]
   },
+  "firewatch:JiangWei": {
+    "NAME": "挑衅",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *引蛇出洞 置入手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *引蛇出洞+ 置入手牌。"
+  },
+
+  "firewatch:IncreaseSpirit": {
+    "NAME": "提振士气",
+    "DESCRIPTION": "获得 !M! 点临时 力量 和 !M! 点 活力 ，本回合打出攻击牌后失去1点临时 力量 。"
+  },
+  "firewatch:Besiege": {
+    "NAME": "围困",
+    "DESCRIPTION": "抽 !M! 张牌并在本回合 保留 你的手牌，将一张 *虚空 放在牌堆顶。 NL 消耗 。"
+  },
 
   "firewatch:GoodEquipment": {
     "NAME": "野战狙击套装",
@@ -80,6 +110,11 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 攻击敌人时额外获得一点 firewatch:技力 。"
   },
 
+  "firewatch:SouthHorse": {
+    "NAME": "马放南山",
+    "DESCRIPTION": "丢弃手牌和游击区的所有攻击牌，每张获得 !B! 点 格挡 。若本回合你没有打出攻击牌，给予所有敌人1层 虚弱 。",
+    "UPGRADE_DESCRIPTION": "丢弃手牌和游击区的所有攻击牌，每张获得 !B! 点 格挡 。给予所有敌人1层 虚弱 。"
+  },
   "firewatch:MultiAngry": {
     "NAME": "积怒",
     "DESCRIPTION": "向抽牌堆和弃牌堆各加入一张 *伤口 。下回合抽到状态牌或诅咒牌后，将其 消耗 ，抽3张牌。",
@@ -90,6 +125,11 @@
     "DESCRIPTION": "每次触发 firewatch:游击 时，对随机敌人造成 !M! 点伤害，从弃牌堆随机获得1张牌。",
     "UPGRADE_DESCRIPTION": "每次触发 firewatch:游击 时，对随机敌人造成 !M! 点伤害，从弃牌堆随机获得1张牌。 NL 每种类型牌首次触发游击时，效果层数+2。"
   },
+  "firewatch:MouthPiano": {
+    "NAME": "贴身口琴",
+    "DESCRIPTION": "获得 !M! 点临时的 力量 和 敏捷 ，并将手牌抽满。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 力量 和 敏捷 ，并将手牌抽满。 NL 消耗 。"
+  },
 
   "firewatch:SoHard": {
     "NAME": "永固",
@@ -99,11 +139,33 @@
     "NAME": "弃辎",
     "DESCRIPTION": "造成 !D! 点伤害并给予3层 易伤 和 金属化 ，选择至多 !M! 张手牌给予目标直至其死亡。"
   },
+  "firewatch:Aloud": {
+    "NAME": "声震林木",
+    "DESCRIPTION": "打出 firewatch:乐声 牌的时候抽 !M! 张牌。"
+  },
 
+  "firewatch:Plant": {
+    "NAME": "部署",
+    "DESCRIPTION": "将所有手牌依次置入游击区，期间每有一张牌离开游击区，造成 !D! 点伤害。 NL firewatch:游击 ：获得 [E] 。"
+  },
   "firewatch:FireNow": {
     "NAME": "火力支援",
     "DESCRIPTION": "不能被打出 。 NL 抽到时，获得5点 firewatch:技力 ，若技力达到上限，立即触发电台且不会因此增加技力上限。",
     "UPGRADE_DESCRIPTION": "不能被打出 。 NL 抽到或离开 firewatch:游击区 时，获得5点 firewatch:技力 ，若技力达到上限，立即触发电台且不会因此增加技力上限。"
+  },
+  "firewatch:Growing": {
+    "NAME": "屯田",
+    "DESCRIPTION": "游击区处于 firewatch:野外 时，获得 !M! 点力量，回合开始时获得 [E] 。"
+  },
+
+  "firewatch:LightAndShadow": {
+    "NAME": "韬光养晦",
+    "DESCRIPTION": "游击区容量上限+ !M! 。"
+  },
+
+  "firewatch:Clock": {
+    "NAME": "警钟",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽取等同游击区牌数量的牌。"
   },
 
   "firewatch:AmbushAttack": {
@@ -127,5 +189,10 @@
   "firewatch:AlertCounter": {
     "NAME": "警戒反击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标意图为攻击，获得 !B! 点 格挡 。 NL 消耗 。"
+  },
+  "firewatch:SnakeOut": {
+    "NAME": "引蛇出洞",
+    "DESCRIPTION": "不能被打出 ， 虚无 。 NL 受到未被 格挡 的伤害时消耗，给予来源 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "不能被打出 ， 虚无 。 NL 受到未被 格挡 的伤害时消耗，给予来源 !M! 层 易伤 和 虚弱。"
   }
 }

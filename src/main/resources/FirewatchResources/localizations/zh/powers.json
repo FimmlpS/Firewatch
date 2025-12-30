@@ -94,5 +94,59 @@
       "你的下一张 #y募讨 的伤害提升 #b",
       " 点。"
     ]
+  },
+  "firewatch:SoundPower": {
+    "NAME": "是乐声……",
+    "DESCRIPTIONS": [
+      "本回合还未触发。 NL 当前乐声：",
+      "本回合已触发。 NL 当前乐声：",
+      "无 ",
+      "攻击 ",
+      "技能 ",
+      "能力 ",
+      "状态 ",
+      "诅咒 "
+    ]
+  },
+  "firewatch:IncreaseSpiritPower": {
+    "NAME": "注意保持精力",
+    "DESCRIPTIONS": [
+      "本回合打出攻击牌后失去 #b",
+      " 点临时力量。"
+    ]
+  },
+  "firewatch:AloudPower": {
+    "NAME": "声震林木",
+    "DESCRIPTIONS": [
+      "打出 #y乐声 牌的时候抽 #b",
+      " 张牌。"
+    ]
+  },
+  "firewatch:GrowingPower": {
+    "NAME": "屯田日久",
+    "DESCRIPTIONS": [
+      "游击区处于野外时，获得 #b",
+      " 点力量，回合开始时获得1点能量。"
+    ]
+  },
+  "firewatch:LightAndShadowPower": {
+    "NAME": "韬光养晦",
+    "DESCRIPTIONS": [
+      "游击区容量上限+ #b",
+      " 。"
+    ]
+  },
+  "firewatch:NoTerraPower": {
+    "NAME": "哦不，人存地失",
+    "DESCRIPTIONS": [
+      "本回合不能向游击区置入卡牌，尝试置入的卡牌会放入弃牌堆。"
+    ]
+  },
+  "firewatch:YesTerraPower": {
+    "NAME": "哦耶，人地皆存",
+    "DESCRIPTIONS": [
+      "本回合游击区的牌打出后，将随机手牌置入游击区。",
+      "本回合游击区的牌打出后，将随机手牌或抽牌堆和弃牌堆的牌置入游击区。"
+    ]
   }
 }

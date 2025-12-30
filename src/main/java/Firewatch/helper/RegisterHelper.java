@@ -1,9 +1,7 @@
 package Firewatch.helper;
 
 import Firewatch.card.attack.*;
-import Firewatch.card.power.Assassin;
-import Firewatch.card.power.GoodEquipment;
-import Firewatch.card.power.SoHard;
+import Firewatch.card.power.*;
 import Firewatch.card.skill.*;
 import Firewatch.relic.TacticalRadio;
 import Firewatch.relic.UpgradeTacticalRadio;
@@ -19,44 +17,62 @@ public class RegisterHelper {
     public static ArrayList<AbstractCard> getCardsToAdd(){
         ArrayList<AbstractCard> list = new ArrayList<>();
 
-        //BASIC
+        //BASIC 4
         list.add(new Strike());
         list.add(new Defend());
         list.add(new EnvironmentDisguise());
         list.add(new Alert());
 
-        //COMMON
+        //COMMON 17
         list.add(new CoverStrike());
         list.add(new OverRiver());
         list.add(new SetHigh());
         list.add(new HardToSay());
         list.add(new Detect());
-
+        list.add(new MorningBird());
+        list.add(new HandWindPiano());
+        list.add(new AnDieFreude());
         list.add(new IcelandTrace());
         list.add(new WeakKick());
         list.add(new BladeOut());
         list.add(new HappyToCry());
         list.add(new BrightStar());
         list.add(new CanBoolDone());
+        list.add(new JiangWei());
 
-        //UNCOMMON
+        list.add(new IncreaseSpirit());
+        list.add(new Besiege());
+
+        //UNCOMMON 13
         list.add(new GoodEquipment());
+
+        list.add(new SouthHorse());
         list.add(new MultiAngry());
+        list.add(new WindAcrossRiver());
+        list.add(new MouthPiano());
 
         list.add(new SoHard());
         list.add(new Abandoned());
+        list.add(new Aloud());
 
+        list.add(new Plant());
         list.add(new FireNow());
+        list.add(new Growing());
 
-        //RARE
+        list.add(new LightAndShadow());
+
+        list.add(new Clock());
+
+        //RARE 3
         list.add(new AmbushAttack());
 
         list.add(new Assassin());
 
         list.add(new MoonTalk());
 
-        //SPECIAL
+        //SPECIAL 2
         list.add(new AlertCounter());
+        list.add(new SnakeOut());
 
         return list;
     }

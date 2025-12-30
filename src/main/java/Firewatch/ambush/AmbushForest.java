@@ -1,5 +1,6 @@
 package Firewatch.ambush;
 
+import Firewatch.action.PlantAction;
 import Firewatch.patch.AmbushPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -19,6 +20,7 @@ public class AmbushForest extends AbstractAmbushArea{
         if(!ambushGroup.isEmpty()){
             AbstractCard c = ambushGroup.getBottomCard();
             ambushGroup.moveToDiscardPile(c);
+            PlantAction.leaveCardCount++;
             return true;
         }
         return false;

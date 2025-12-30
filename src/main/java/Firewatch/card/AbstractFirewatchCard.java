@@ -46,6 +46,11 @@ public abstract class AbstractFirewatchCard extends CustomCard {
         return isAmbushCard() && AmbushPatch.ambushType==type;
     }
 
+    //协奏
+    public void onTogetherSound(){
+
+    }
+
     //离开游击区触发
     public void onLeaveAmbush(){
 

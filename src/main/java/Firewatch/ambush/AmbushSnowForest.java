@@ -1,5 +1,6 @@
 package Firewatch.ambush;
 
+import Firewatch.action.PlantAction;
 import Firewatch.patch.AmbushPatch;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
@@ -22,6 +23,7 @@ public class AmbushSnowForest extends AbstractAmbushArea{
         if(!ambushGroup.isEmpty()){
             AbstractCard c = ambushGroup.getBottomCard();
             ambushGroup.moveToDiscardPile(c);
+            PlantAction.leaveCardCount++;
             return true;
         }
         return false;

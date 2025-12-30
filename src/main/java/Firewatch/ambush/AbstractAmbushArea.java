@@ -1,8 +1,11 @@
 package Firewatch.ambush;
 
 import Firewatch.patch.AmbushPatch;
+import Firewatch.power.buff.LightAndShadowPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public abstract class AbstractAmbushArea {
     public AmbushPatch.AmbushType ambushType;
@@ -12,7 +15,11 @@ public abstract class AbstractAmbushArea {
     }
 
     public int getTopLimit(){
-        return 0;
+        int amt = 0;
+        AbstractPower las = AbstractDungeon.player.getPower(LightAndShadowPower.POWER_ID);
+        if(las != null)
+            amt+=las.amount;
+        return amt;
     }
 
 

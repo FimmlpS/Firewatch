@@ -1,6 +1,7 @@
 package Firewatch.patch;
 
 import Firewatch.card.AbstractFirewatchCard;
+import Firewatch.helper.SoundHelper;
 import Firewatch.ui.AmbushPanel;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -17,6 +18,7 @@ public class AmbushFixPatch {
     //本Patch是用来使得游击牌进入其他牌堆后失去属性并重置耗能
 
     private static void resetAmbush(CardGroup _inst, AbstractCard c) {
+        SoundHelper.sounded(c,_inst.type != CardGroup.CardGroupType.HAND && _inst.type != OtherEnum.HAND_AMBUSH);
         if(_inst.type == OtherEnum.HAND_AMBUSH){
             AmbushPatch.CardField.inAmbush.set(c,true);
             AmbushPatch.ambushArea.onCardBecomeAmbush(c);
@@ -62,6 +64,7 @@ public class AmbushFixPatch {
     public static class CGAddToHandPatch{
         @SpirePostfixPatch
         public static void Postfix(CardGroup _inst,AbstractCard c){
+            SoundHelper.sounded(c,false);
             if(AmbushPatch.CardField.inAmbush.get(c)){
                 AmbushPatch.CardField.inAmbush.set(c,false);
                 c.costForTurn = c.cost;

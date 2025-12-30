@@ -1,5 +1,6 @@
 package Firewatch.ambush;
 
+import Firewatch.action.PlantAction;
 import Firewatch.patch.AmbushPatch;
 import Firewatch.power.buff.RiversidePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -29,6 +30,7 @@ public class AmbushRiverside extends AbstractAmbushArea{
                 }
             }
             ambushGroup.moveToDiscardPile(c);
+            PlantAction.leaveCardCount++;
             return true;
         }
         return false;
