@@ -150,6 +150,10 @@ public class AmbushPanel extends AbstractPanel {
                     areaMsg = uiStrings.TEXT[8];
                     areaIndex = 4;
                     break;
+                case Hill:
+                    areaMsg = uiStrings.TEXT[9];
+                    areaIndex = 5;
+                    break;
             }
         }
         FontHelper.cardTitleFont.getData().setScale(fontScale);

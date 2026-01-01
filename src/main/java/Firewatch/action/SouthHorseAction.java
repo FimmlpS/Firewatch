@@ -23,7 +23,7 @@ public class SouthHorseAction extends AbstractGameAction {
         }
         for(AbstractCard c : AmbushPatch.ambushGroup.group) {
             if(c.type == AbstractCard.CardType.ATTACK){
-                addToTop(new DiscardSpecificCardAction(c));
+                addToTop(new DiscardSpecificCardAction(c,AmbushPatch.ambushGroup));
                 amt++;
             }
         }

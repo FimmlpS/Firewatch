@@ -29,6 +29,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 
+import java.util.ArrayList;
+
 public class AmbushPatch {
     //游击区相关
     public static int upLimit = 8;
@@ -41,9 +43,14 @@ public class AmbushPatch {
         AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, uiStrings.TEXT[2], true));
     }
 
+    public static void atTurnStart(){
+        ambushArea.atTurnStart();
+    }
+
     public static void setType(AmbushType type){
         if(ambushType == type)
             return;
+        recordType(type);
         //So hard
         if(ambushType == AmbushType.SnowTown || ambushType == AmbushType.PlainTown){
             AbstractPower soHard = AbstractDungeon.player.getPower(SoHardPower.POWER_ID);
@@ -69,6 +76,9 @@ public class AmbushPatch {
             case PlainTown:
                 ambushArea = new AmbushPlainTown();
                 break;
+            case Hill:
+                ambushArea = new AmbushHill();
+                break;
             default:
                 ambushArea = new AmbushForest();
                 break;
@@ -81,11 +91,25 @@ public class AmbushPatch {
         }
     }
 
+    //进入过的区域
+    public static ArrayList<AmbushType> typeEnters = new ArrayList<>();
+    //进入过的牌数
+    public static int cardEnterCount = 0;
+
+    public static void recordType(AmbushPatch.AmbushType type){
+        if(!typeEnters.contains(type)){
+            typeEnters.add(type);
+        }
+    }
+
     public static void resetAmbush(){
         ambushType = AmbushType.Forest;
         ambushArea = new AmbushForest();
         ambushGroup.clear();
         AmbushPanel.reset();
+        typeEnters.clear();
+        typeEnters.add(AmbushType.Forest);
+        cardEnterCount = 0;
     }
 
     public static void onTriggerAmbush(AbstractCard card){
@@ -146,7 +170,7 @@ public class AmbushPatch {
             sc.unhover();
             sc.stopGlowing();
             sc.lighten(true);
-            CardField.inAmbush.set(sc,true);
+            //CardField.inAmbush.set(sc,true);
             ambushGroup.addToTop(sc);
         }
     }
@@ -161,14 +185,14 @@ public class AmbushPatch {
             sc.unhover();
             sc.stopGlowing();
             sc.lighten(true);
-            CardField.inAmbush.set(sc,true);
+            //CardField.inAmbush.set(sc,true);
             ambushGroup.addToBottom(c);
         }
     }
 
     public static void resetBeforeRemove(AbstractCard c){
         ambushGroup.removeCard(c);
-        CardField.inAmbush.set(c,false);
+        //CardField.inAmbush.set(c,false);
     }
 
     public static void moveToAmbush(CardGroup from,AbstractCard c){

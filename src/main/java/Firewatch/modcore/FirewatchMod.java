@@ -194,6 +194,7 @@ public class FirewatchMod implements OnCardUseSubscriber,PreStartGameSubscriber,
     @Override
     public void receiveOnPlayerTurnStart() {
         FirewatchHelper.atTurnStart();
+        AmbushPatch.atTurnStart();
     }
 
     @Override

@@ -2,6 +2,7 @@ package Firewatch.patch;
 
 import Firewatch.card.AbstractFirewatchCard;
 import Firewatch.helper.SoundHelper;
+import Firewatch.power.buff.FallenYearPower;
 import Firewatch.ui.AmbushPanel;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -9,6 +10,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.screens.select.HandCardSelectScreen;
 
 public class AmbushFixPatch {
@@ -22,6 +24,7 @@ public class AmbushFixPatch {
         if(_inst.type == OtherEnum.HAND_AMBUSH){
             AmbushPatch.CardField.inAmbush.set(c,true);
             AmbushPatch.ambushArea.onCardBecomeAmbush(c);
+            AmbushPatch.cardEnterCount++;
             return;
         }
         if(!AmbushPatch.CardField.inAmbush.get(c))
@@ -32,6 +35,13 @@ public class AmbushFixPatch {
         c.costForTurn = c.cost;
         if(c instanceof AbstractFirewatchCard){
             ((AbstractFirewatchCard) c).onLeaveAmbush();
+        }
+        if(_inst.type == CardGroup.CardGroupType.DISCARD_PILE){
+            //落叶千钧
+            AbstractPower fy = AbstractDungeon.player.getPower(FallenYearPower.POWER_ID);
+            if(fy!=null){
+                fy.onSpecificTrigger();
+            }
         }
         AmbushPatch.ambushArea.onCardLeaveAmbush(c);
     }

@@ -12,6 +12,7 @@ public class ReplaceAreaAction extends AbstractGameAction {
     @Override
     public void update() {
         AmbushHelper.setAmbushType(ambushType);
+        addToTop(new DiscardOverflowAction());
         this.isDone = true;
     }
 

@@ -3,6 +3,7 @@ package Firewatch.helper;
 import Firewatch.card.attack.*;
 import Firewatch.card.power.*;
 import Firewatch.card.skill.*;
+import Firewatch.card.status.ShabbyOpen;
 import Firewatch.relic.TacticalRadio;
 import Firewatch.relic.UpgradeTacticalRadio;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -43,7 +44,7 @@ public class RegisterHelper {
         list.add(new IncreaseSpirit());
         list.add(new Besiege());
 
-        //UNCOMMON 13
+        //UNCOMMON 17
         list.add(new GoodEquipment());
 
         list.add(new SouthHorse());
@@ -58,21 +59,34 @@ public class RegisterHelper {
         list.add(new Plant());
         list.add(new FireNow());
         list.add(new Growing());
-
+        list.add(new NoTerra());
         list.add(new LightAndShadow());
-
+        list.add(new Protect());
+        list.add(new Prepare());
+        list.add(new Introduce());
         list.add(new Clock());
 
-        //RARE 3
+        //RARE 10
+        list.add(new Battlessless());
         list.add(new AmbushAttack());
 
         list.add(new Assassin());
+        list.add(new ManVSWild());
+        list.add(new RevengeForm());
 
         list.add(new MoonTalk());
+        list.add(new UnyieldFire());
 
-        //SPECIAL 2
+        list.add(new FallenYear());
+        list.add(new HoldToAttack());
+        list.add(new HardPlace());
+
+        //SPECIAL 5
+        list.add(new OurHome());
         list.add(new AlertCounter());
         list.add(new SnakeOut());
+        list.add(new ShabbyOpen());
+        list.add(new YesTerra());
 
         return list;
     }

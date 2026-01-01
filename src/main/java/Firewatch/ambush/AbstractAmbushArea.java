@@ -40,6 +40,10 @@ public abstract class AbstractAmbushArea {
 
     }
 
+    public void atTurnStart(){
+
+    }
+
     public void onEnterArea(){
 
     }

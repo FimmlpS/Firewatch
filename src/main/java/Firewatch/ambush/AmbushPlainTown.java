@@ -45,7 +45,6 @@ public class AmbushPlainTown extends AbstractAmbushArea{
         }
         wontTriggerAnyMore = true;
         AbstractDungeon.actionManager.addToBottom(new ReplaceAreaAction(AmbushPatch.AmbushType.Forest));
-        AbstractDungeon.actionManager.addToBottom(new DiscardOverflowAction());
     }
 
 }

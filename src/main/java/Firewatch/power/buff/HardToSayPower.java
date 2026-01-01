@@ -11,6 +11,7 @@ public class HardToSayPower extends AbstractFirewatchPower {
     public static final String POWER_ID = "firewatch:HardToSayPower";
 
     boolean upgraded;
+    boolean triggered = false;
 
     public HardToSayPower(AbstractCreature owner, int amount, boolean upgraded) {
         super(POWER_ID,owner,amount);
@@ -24,8 +25,10 @@ public class HardToSayPower extends AbstractFirewatchPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if(damageAmount>0 || upgraded){
             this.flash();
-            addToBot(new ApplyPowerAction(owner,owner,new EnergizedPower(owner,amount),amount));
+            if(!triggered)
+                addToBot(new ApplyPowerAction(owner,owner,new EnergizedPower(owner,amount),amount));
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+            triggered = true;
         }
         return super.onAttacked(info, damageAmount);
     }

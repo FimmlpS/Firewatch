@@ -35,7 +35,7 @@ public class SoundHelper {
             }
         }
         else {
-            if(!SoundPatch.AbstractCardPatch.sounded.get(c)){
+            if(!SoundPatch.AbstractCardPatch.sounded.get(c) && c.costForTurn>0){
                 SoundPatch.AbstractCardPatch.sounded.set(c,true);
                 c.updateCost(-1);
             }
@@ -43,6 +43,8 @@ public class SoundHelper {
     }
 
     public static void markSound(AbstractCard.CardType cardType){
+        if(triggerSound)
+            return;
         if(!soundTypes.contains(cardType)){
             soundTypes.add(cardType);
         }

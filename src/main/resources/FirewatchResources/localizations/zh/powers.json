@@ -139,7 +139,7 @@
   "firewatch:NoTerraPower": {
     "NAME": "哦不，人存地失",
     "DESCRIPTIONS": [
-      "本回合不能向游击区置入卡牌，尝试置入的卡牌会放入弃牌堆。"
+      "本回合不能向游击区置入卡牌。"
     ]
   },
   "firewatch:YesTerraPower": {
@@ -147,6 +147,63 @@
     "DESCRIPTIONS": [
       "本回合游击区的牌打出后，将随机手牌置入游击区。",
       "本回合游击区的牌打出后，将随机手牌或抽牌堆和弃牌堆的牌置入游击区。"
+    ]
+  },
+  "firewatch:FallenYearPower": {
+    "NAME": "落叶 千钧",
+    "DESCRIPTIONS": [
+      "本回合每有一张牌从游击区进入弃牌堆，对随机目标造成 #b",
+      " 点伤害然后使此伤害增加 #b",
+      " 点。"
+    ]
+  },
+  "firewatch:UnyieldFirePower": {
+    "NAME": "无法平息",
+    "DESCRIPTIONS": [
+      "下回合开始时，受到 #b",
+      " 点伤害。"
+    ]
+  },
+  "firewatch:HardPlacePower": {
+    "NAME": "占据险地",
+    "DESCRIPTIONS": [
+      "回合开始时，你获得等同本场战斗进入游击区牌数量的格挡。也即获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "firewatch:PreparePower": {
+    "NAME": "整备待战，不可懈怠",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 回合后，将一张 #y",
+      " 放入手中。"
+    ]
+  },
+  "firewatch:FarShallPower": {
+    "NAME": "远方哨声",
+    "DESCRIPTIONS": [
+      "打出 #y乐声牌 时，从抽牌堆抽取 #b",
+      " 张同类型的牌。"
+    ]
+  },
+  "firewatch:ManVSWildPower": {
+    "NAME": "断尾求生",
+    "DESCRIPTIONS": [
+      "当你要被杀死时，免死并恢复20%生命，然后本场战斗你不能向游击区置入牌，且每回合开始失去1生命上限。"
+    ]
+  },
+  "firewatch:RevengeFormPower": {
+    "NAME": "复仇形态",
+    "DESCRIPTIONS": [
+      "每当从游击区打出牌之后，将 #b",
+      " 点敏捷转化为力量。"
+    ]
+  },
+  "firewatch:OurHomePower": {
+    "NAME": "我们的故乡",
+    "DESCRIPTIONS": [
+      "回合开始时，从野外选择一种未选择过的游击区类型以更换（可以跳过）",
+      "回合开始时，从野外选择一种游击区类型以更换（可以跳过）"
     ]
   }
 }

@@ -34,7 +34,7 @@ public class IcelandTrace extends AbstractFirewatchCard {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         ArrayList<AbstractCard> tmpGroup = new ArrayList<>();
         for(AbstractCard tmp : FirewatchHelper.cardsLastTurn){
-            if(tmp.type == CardType.ATTACK)
+            if(tmp.type == CardType.ATTACK && !(tmp instanceof IcelandTrace))
                 tmpGroup.add(tmp);
         }
         if(tmpGroup.size()>1)

@@ -25,6 +25,9 @@ public class FirewatchHelper {
     }
 
     public static boolean isWild(){
+        if(AbstractDungeon.player.hasPower("todo") && AmbushPatch.ambushType==AmbushPatch.AmbushType.Forest){
+            return false;
+        }
         return AmbushPatch.ambushType == AmbushPatch.AmbushType.Forest || AmbushPatch.ambushType == AmbushPatch.AmbushType.Riverside || AmbushPatch.ambushType == AmbushPatch.AmbushType.SnowForest || AmbushPatch.ambushType == AmbushPatch.AmbushType.Hill;
     }
 
